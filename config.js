@@ -2,7 +2,7 @@
 // 🔑 YOUR SETTINGS — EDIT API KEY BEFORE UPLOAD
 // ==============================================
 const CONFIG = {
-  // 👇 PASTE YOUR API KEY HERE
+  // 👇 YOUR API KEY — already filled in below
   API_KEY: "b0b49cadef59bc39ab717f01b7ec0b29",
 
   // API Settings
