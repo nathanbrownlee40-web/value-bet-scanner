@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#10b981">
+  <meta name="description" content="Value Bet Scanner — Find Positive EV Bets">
+  <title>Value Bet Scanner</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="bg-gradient"></div>
+  <div class="app-container">
+
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <span class="logo-icon">📊</span>
+        <div>
+          <h1>Value Bet Scanner</h1>
+          <p class="tagline">Smart bets. Positive EV. Long-term profit.</p>
+        </div>
+      </div>
+      <div class="status-badge" id="status">
+        <span class="dot"></span>
+        <span id="statusText">Ready</span>
+      </div>
+    </header>
+
+    <!-- Controls -->
+    <section class="controls-card">
+      <button id="scanBtn" class="scan-btn">
+        <span class="btn-icon">🔄</span>
+        <span class="btn-text">Scan for Bets</span>
+      </button>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">All Bets</button>
+        <button class="filter-btn" data-filter="safe">🛡️ Safe Options</button>
+        <button class="filter-btn" data-filter="strong">🔥 Strong Value</button>
+      </div>
+    </section>
+
+    <!-- Stats Cards -->
+    <section class="stats-grid">
+      <div class="stat-card">
+        <p class="stat-label">Matches Scanned</p>
+        <p class="stat-value" id="totalBets">0</p>
+      </div>
+      <div class="stat-card accent-green">
+        <p class="stat-label">Value Bets Found</p>
+        <p class="stat-value" id="valueBets">0</p>
+      </div>
+      <div class="stat-card accent-blue">
+        <p class="stat-label">Safe Options</p>
+        <p class="stat-value" id="safeBets">0</p>
+      </div>
+    </section>
+
+    <!-- Bets Table -->
+    <section class="table-card">
+      <div class="table-header-row">
+        <h2>Detected Bets</h2>
+      </div>
+      <div class="table-wrapper">
+        <table id="betsTable">
+          <thead>
+            <tr>
+              <th>League</th>
+              <th>Match & Kickoff</th>
+              <th>Market</th>
+              <th>Bookmaker / Odds</th>
+              <th>True Prob.</th>
+              <th>EV %</th>
+              <th>Confidence</th>
+              <th>Recommendation</th>
+            </tr>
+          </thead>
+          <tbody id="betsBody">
+            <tr>
+              <td colspan="8" class="empty-state">
+                <span class="empty-icon">🎯</span>
+                <p>Click "Scan for Bets" to load matches & find value</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Safe Option Info -->
+    <section class="info-card">
+      <h3>🛡️ Why the Safe Option is Better</h3>
+      <div class="reasons-grid">
+        <div class="reason-item">
+          <span class="reason-icon">📉</span>
+          <div>
+            <strong>Lower Variance</strong>
+            <p>Smaller but consistent returns — avoids big losing streaks</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-icon">🎯</span>
+          <div>
+            <strong>Higher Hit Rate</strong>
+            <p>Lower odds = higher probability — wins more often</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-icon">💰</span>
+          <div>
+            <strong>Bankroll Protection</strong>
+            <p>Preserve capital — compound steady gains over time</p>
+          </div>
+        </div>
+        <div class="reason-item">
+          <span class="reason-icon">📈</span>
+          <div>
+            <strong>Confidence Correlation</strong>
+            <p>Higher confidence = more reliable estimates</p>
+          </div>
+        </div>
+      </div>
+      <div class="confidence-scale">
+        <p class="scale-title">Confidence Levels</p>
+        <div class="scale-badges">
+          <span class="conf-badge high">🟢 High — EV ≥ 5%</span>
+          <span class="conf-badge med">🟡 Medium — EV 2–5%</span>
+          <span class="conf-badge low">🔴 Low — EV 0–2%</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>Value Bet Scanner • Positive EV Betting Tool</p>
+    </footer>
+
+  </div>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
