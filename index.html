@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#10b981">
-  <meta name="description" content="Value Bet Scanner — Find Positive EV Bets">
-  <title>Value Bet Scanner</title>
+  <meta name="description" content="Value Bet Scanner — Real Upcoming Matches Only">
   <link rel="manifest" href="manifest.json">
+  <title>Value Bet Scanner</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,35 +16,35 @@
   <div class="bg-gradient"></div>
   <div class="app-container">
 
-    <!-- Header -->
     <header class="header">
       <div class="logo">
         <span class="logo-icon">📊</span>
         <div>
           <h1>Value Bet Scanner</h1>
-          <p class="tagline">Smart bets. Positive EV. Long-term profit.</p>
+          <p class="tagline">⚽ Goals • 📐 Corners • 🎯 Shots • ✅ BTTS — Upcoming Only</p>
         </div>
       </div>
       <div class="status-badge" id="status">
         <span class="dot"></span>
-        <span id="statusText">Ready</span>
+        <span id="statusText">Ready — Click Scan</span>
       </div>
     </header>
 
-    <!-- Controls -->
     <section class="controls-card">
       <button id="scanBtn" class="scan-btn">
         <span class="btn-icon">🔄</span>
-        <span class="btn-text">Scan for Bets</span>
+        <span class="btn-text">Scan Upcoming Games</span>
       </button>
       <div class="filter-group">
-        <button class="filter-btn active" data-filter="all">All Bets</button>
-        <button class="filter-btn" data-filter="safe">🛡️ Safe Options</button>
-        <button class="filter-btn" data-filter="strong">🔥 Strong Value</button>
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="safe">🛡️ Safe</button>
+        <button class="filter-btn" data-filter="strong">🔥 Strong EV</button>
+        <button class="filter-btn" data-filter="goals">⚽ Goals</button>
+        <button class="filter-btn" data-filter="corners">📐 Corners</button>
+        <button class="filter-btn" data-filter="shots">🎯 Shots</button>
       </div>
     </section>
 
-    <!-- Stats Cards -->
     <section class="stats-grid">
       <div class="stat-card">
         <p class="stat-label">Matches Scanned</p>
@@ -60,30 +60,30 @@
       </div>
     </section>
 
-    <!-- Bets Table -->
     <section class="table-card">
       <div class="table-header-row">
-        <h2>Detected Bets</h2>
+        <h2>📋 Detected Bets — Upcoming Matches Only</h2>
       </div>
       <div class="table-wrapper">
         <table id="betsTable">
           <thead>
             <tr>
               <th>League</th>
-              <th>Match & Kickoff</th>
+              <th>Match / Kickoff</th>
               <th>Market</th>
-              <th>Bookmaker / Odds</th>
+              <th>Selection</th>
+              <th>Bookie / Odds</th>
               <th>True Prob.</th>
               <th>EV %</th>
               <th>Confidence</th>
-              <th>Recommendation</th>
+              <th>Rec</th>
             </tr>
           </thead>
           <tbody id="betsBody">
             <tr>
-              <td colspan="8" class="empty-state">
+              <td colspan="9" class="empty-state">
                 <span class="empty-icon">🎯</span>
-                <p>Click "Scan for Bets" to load matches & find value</p>
+                <p>Click "Scan Upcoming Games" — loads REAL upcoming matches only</p>
               </td>
             </tr>
           </tbody>
@@ -91,37 +91,24 @@
       </div>
     </section>
 
-    <!-- Safe Option Info -->
     <section class="info-card">
       <h3>🛡️ Why the Safe Option is Better</h3>
       <div class="reasons-grid">
         <div class="reason-item">
           <span class="reason-icon">📉</span>
-          <div>
-            <strong>Lower Variance</strong>
-            <p>Smaller but consistent returns — avoids big losing streaks</p>
-          </div>
+          <div><strong>Lower Variance</strong><p>Consistent returns — avoids big losing streaks</p></div>
         </div>
         <div class="reason-item">
           <span class="reason-icon">🎯</span>
-          <div>
-            <strong>Higher Hit Rate</strong>
-            <p>Lower odds = higher probability — wins more often</p>
-          </div>
+          <div><strong>Higher Hit Rate</strong><p>Lower odds = higher probability — wins more often</p></div>
         </div>
         <div class="reason-item">
           <span class="reason-icon">💰</span>
-          <div>
-            <strong>Bankroll Protection</strong>
-            <p>Preserve capital — compound steady gains over time</p>
-          </div>
+          <div><strong>Bankroll Protection</strong><p>Preserve capital — compound steady gains over time</p></div>
         </div>
         <div class="reason-item">
           <span class="reason-icon">📈</span>
-          <div>
-            <strong>Confidence Correlation</strong>
-            <p>Higher confidence = more reliable estimates</p>
-          </div>
+          <div><strong>Confidence Correlation</strong><p>Higher confidence = more reliable estimates</p></div>
         </div>
       </div>
       <div class="confidence-scale">
@@ -135,10 +122,25 @@
     </section>
 
     <footer class="footer">
-      <p>Value Bet Scanner • Positive EV Betting Tool</p>
+      <p>Value Bet Scanner • Real Upcoming Matches Only</p>
     </footer>
 
   </div>
+
+  <!-- PWA Install Prompt -->
+  <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      console.log('✅ PWA can be installed — install button available');
+    });
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        console.log('✅ PWA Ready — install option in browser menu');
+      });
+    }
+  </script>
   <script src="config.js"></script>
   <script src="app.js"></script>
 </body>
