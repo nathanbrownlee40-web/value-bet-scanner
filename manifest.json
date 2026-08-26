@@ -1,0 +1,16 @@
+{
+  "name": "Value Bet Scanner",
+  "short_name": "BetScanner",
+  "description": "Find positive EV value bets & safe options",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0f1b",
+  "theme_color": "#10b981",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2991/2991110.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
