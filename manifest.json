@@ -1,16 +1,24 @@
 {
   "name": "Value Bet Scanner",
   "short_name": "BetScanner",
-  "description": "Find positive EV value bets & safe options",
+  "description": "Find Positive EV Bets — Goals, Corners, Shots, BTTS",
   "start_url": "/",
   "display": "standalone",
+  "scope": "/",
   "background_color": "#0a0f1b",
   "theme_color": "#10b981",
+  "orientation": "any",
   "icons": [
     {
       "src": "https://cdn-icons-png.flaticon.com/512/2991/2991110.png",
-      "sizes": "512x512",
+      "sizes": "192x192",
       "type": "image/png"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/2991/2991110.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }
