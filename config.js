@@ -2,16 +2,17 @@
 // 🔑 YOUR SETTINGS — EDIT API KEY BEFORE UPLOAD
 // ==============================================
 const CONFIG = {
-  // 👇 YOUR API KEY — already filled in below
+  // 👇 PUT YOUR REAL API KEY FROM the-odds-api.com HERE
   API_KEY: "5942b5937bf0ad38f48ce9f3904797e0",
 
-  // API Settings
+  // API Settings — using OFFICIAL market names
   API_URL: "https://api.the-odds-api.com/v4/sports",
   REGIONS: "uk,eu",
-  MARKETS: "h2h,draw_no_both,over_under,btts,corners,shots_on_target",
+  // ✅ ONLY official market names — no typos, no extras
+  MARKETS: "h2h,spreads,totals,btts",
   ODDS_FORMAT: "decimal",
 
-  // 🔒 ONLY UPCOMING MATCHES — filter out past games
+  // 🔒 ONLY UPCOMING MATCHES
   ONLY_UPCOMING: true,
 
   // Value Bet Rules
@@ -20,6 +21,5 @@ const CONFIG = {
   HIGH_CONFIDENCE_EV: 5.0,
   MED_CONFIDENCE_EV: 2.0,
 
-  // Sports to scan
   SPORTS: ["soccer"]
 };
