@@ -3,7 +3,7 @@
 // ==============================================
 const CONFIG = {
   // 👇 PASTE YOUR API KEY HERE
-  API_KEY: "YOUR_API_KEY_HERE",
+  API_KEY: "b0b49cadef59bc39ab717f01b7ec0b29",
 
   // API Settings
   API_URL: "https://api.the-odds-api.com/v4/sports",
